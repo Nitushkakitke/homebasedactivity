@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics</title>
+</head>
+<body>
+    <h1>JavaScript Basics Demo</h1>
+    <p>Click the button below to run the demo.</p>
+    <button onclick="demoJavaScript()">Run Demo</button>
+    <div id="output"></div>
+
+    <script>
+        function demoJavaScript() {
+            // Single-line comment: Declaring variables with different data types
+            let name = "John Doe"; // String
+            let age = 30; // Number
+            let isDeveloper = true; // Boolean
+            let skills = ["JavaScript", "HTML", "CSS"]; // Array
+            let address = { city: "New York", zip: 10001 }; // Object
+
+            /* 
+            Multi-line comment:
+            Logging variables to the console 
+            and displaying them in the document
+            */
+            console.log("Name:", name);
+            console.log("Age:", age);
+            console.log("Is Developer:", isDeveloper);
+            console.log("Skills:", skills);
+            console.log("Address:", address);
+
+            // Displaying the variables in the document
+            document.getElementById("output").innerHTML = `
+                <h2>Variable Outputs</h2>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Age:</strong> ${age}</p>
+                <p><strong>Is Developer:</strong> ${isDeveloper}</p>
+                <p><strong>Skills:</strong> ${skills.join(", ")}</p>
+                <p><strong>Address:</strong> City - ${address.city}, ZIP - ${address.zip}</p>
+            `;
+        }
+    </script>
+</body>
+</html>
